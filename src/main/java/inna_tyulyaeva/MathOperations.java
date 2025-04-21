@@ -1,6 +1,6 @@
 package inna_tyulyaeva;
 
-public class Main {
+public class MathOperations {
     private static double aDouble = 1.1, bDouble = 2.2, infinityFloat, infinityDouble;
     private static int aInt = 1, bInt = 2, cInt = 3, dInt = 4;
 
