@@ -1,7 +1,5 @@
 package inna_tyulyaeva;
 
-import static java.lang.Math.*;
-
 public class Main {
     private static double aDouble = 1.1, bDouble = 2.2, infinityFloat, infinityDouble;
     private static int aInt = 1, bInt = 2, cInt = 3, dInt = 4, int_max=2147483647;
