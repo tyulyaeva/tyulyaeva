@@ -24,7 +24,7 @@ public class Main {
         System.out.println("\n4) Получить переполнение при арифметической операции:" );
         infinityFloat = Float.MAX_VALUE * 2;
         infinityDouble = Double.MAX_VALUE * 2;
-        System.out.println("Переполнение Float: " + infinityFloat);
-        System.out.println("Переполнение Double: " + infinityDouble);
+        System.out.println("Переполнение Float: "+Float.MAX_VALUE +"*2=" + infinityFloat);
+        System.out.println("Переполнение Double: "+Double.MAX_VALUE +"*2=" + infinityDouble);
     }
 }
