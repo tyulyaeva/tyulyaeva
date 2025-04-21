@@ -16,7 +16,7 @@ public class DragAndDrop {
     }
 
     @Test
-    void FifthLesson1() {
+    void fifthLesson1() {
         open(baseUrl);
         $("#column-a").shouldHave(text("A"));
         $("#column-b").shouldHave(text("B"));
