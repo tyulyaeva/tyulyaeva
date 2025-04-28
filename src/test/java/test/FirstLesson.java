@@ -1,3 +1,5 @@
+package test;
+
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.FileDownloadMode;
 import org.junit.jupiter.api.BeforeAll;
