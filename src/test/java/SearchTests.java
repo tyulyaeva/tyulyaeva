@@ -5,12 +5,10 @@ import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static org.openqa.selenium.Keys.SPACE;
 
 public class SearchTests {
 
@@ -34,9 +32,10 @@ public class SearchTests {
         $("#userEmail").setValue("tyulyaeva.inna@yandex.ru");
         $("#genterWrapper").$(byText("Female")).click();
         $("#userNumber").setValue("9178332203");
-        $("[id=dateOfBirthInput]").sendKeys(Keys.CONTROL + "A");
-        $("[id=dateOfBirthInput]").sendKeys(SPACE);
-        $("#dateOfBirthInput").setValue("20 Jul 1991").pressEnter();
+        $("#dateOfBirthInput").click();
+        $(".react-datepicker__month-select").selectOption("July");
+        $(".react-datepicker__year-select").selectOption("1991");
+        $(".react-datepicker__month").$(byText("20")).click();
         $("#subjectsInput").setValue("Arts").pressEnter();
         $("#hobbiesWrapper").$(byText("Reading")).click();
         $("#uploadPicture").uploadFromClasspath("retouch.jpg");
