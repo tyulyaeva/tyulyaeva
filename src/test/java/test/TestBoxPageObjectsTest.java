@@ -13,7 +13,7 @@ public class TestBoxPageObjectsTest extends TestBase{
                 .setEmail("tyulyaeva.inna@yandex.ru")
                 .setCurrentAddress("Санкт-Петербург, п. Парглово")
                 .setPermanentAddress("Санкт-Петербург, п. Парглово 2")
-                .clickButton()
+                .clickSubmit()
                 .textBoxResults();
     }
 }

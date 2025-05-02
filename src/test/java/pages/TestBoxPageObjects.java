@@ -43,7 +43,7 @@ public class TestBoxPageObjects {
         return this;
     }
 
-    public TestBoxPageObjects clickButton() {
+    public TestBoxPageObjects clickSubmit() {
         submitClosed.click();
         return this;
     }
