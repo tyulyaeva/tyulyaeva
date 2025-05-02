@@ -2,12 +2,10 @@ package test;
 
 import org.junit.jupiter.api.Test;
 import pages.FormPageObjects;
-import pages.components.BirthComponents;
 import pages.components.ShouldHaveText;
 
 public class PageObjectsAllPositive extends TestBase {
     FormPageObjects pageObjects = new FormPageObjects();
-    BirthComponents birthComponents = new BirthComponents();
     ShouldHaveText shouldHaveText = new ShouldHaveText();
 
     @Test
