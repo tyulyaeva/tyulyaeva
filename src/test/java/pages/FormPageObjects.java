@@ -1,7 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import pages.components.BirthComponents;
+import pages.components.BirthComponent;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
@@ -21,7 +21,7 @@ public class FormPageObjects {
     private final SelenideElement stateInput = $("#react-select-3-input");
     private final SelenideElement cityInput = $("#react-select-4-input");
     private final SelenideElement submitClosed = $("#submit");
-    BirthComponents birthComponents = new BirthComponents();
+    BirthComponent birthComponent = new BirthComponent();
 
 
     public FormPageObjects openPage () {
@@ -50,7 +50,7 @@ public class FormPageObjects {
     }
     public FormPageObjects setValueDateOfBirthday (String day, String month, String year) {
         dateOfBirthInput.click();
-        birthComponents.setValueDateOfBirth (day, month, year);
+        birthComponent.setValueDateOfBirth (day, month, year);
         return this;
     }
 

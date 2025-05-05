@@ -6,7 +6,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
-public class BirthComponents {
+public class BirthComponent {
     private final SelenideElement selectYear = $(".react-datepicker__year-select");
     private final SelenideElement selectMonth = $(".react-datepicker__month-select");
 

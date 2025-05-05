@@ -6,15 +6,15 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
-public class ShouldHaveText {
+public class ResultTableComponent {
     private final SelenideElement submitModal = $(".table-responsive");
 
-    public ShouldHaveText checkResult(String key, String value) {
+    public ResultTableComponent checkResult(String key, String value) {
         submitModal.$(byText(key)).parent().shouldHave(text(value));
         return this;
     }
     
-    public ShouldHaveText negativeCheck () {
+    public ResultTableComponent negativeCheck () {
         submitModal.shouldNotBe(visible);
         return this;
     }    

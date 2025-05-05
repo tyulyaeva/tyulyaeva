@@ -1,8 +1,8 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import pages.components.TextBoxShouldHaveText;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -13,9 +13,10 @@ public class TestBoxPageObjects {
     private final SelenideElement permanentAddressInput = $("#permanentAddress");
     private final SelenideElement submitClosed = $("#submit");
 
-    public void textBoxResults() {
-        new TextBoxShouldHaveText().textBoxResults();
-    }
+    private final SelenideElement userNameOutput = $("#output #name");
+    private final SelenideElement userEmailOutput = $("#output #email");
+    private final SelenideElement currentAddressOutput = $("#output #currentAddress");
+    private final SelenideElement permanentAddressOutput = $("#output #permanentAddress");
 
     public TestBoxPageObjects openPage() {
         open("https://demoqa.com/text-box");
@@ -45,6 +46,25 @@ public class TestBoxPageObjects {
 
     public TestBoxPageObjects clickSubmit() {
         submitClosed.click();
+        return this;
+    }
+
+    public TestBoxPageObjects checkNameResult(String value) {
+        userNameOutput.shouldHave(text(value));
+        return this;
+    }
+
+    public TestBoxPageObjects checkEmailResult(String value) {
+        userEmailOutput.shouldHave(text(value));
+        return this;
+    }
+    public TestBoxPageObjects checkCurrentAddressResult(String value) {
+        currentAddressOutput.shouldHave(text(value));
+        return this;
+    }
+
+    public TestBoxPageObjects checkPermanentAddressResult(String value) {
+        permanentAddressOutput.shouldHave(text(value));
         return this;
     }
 }

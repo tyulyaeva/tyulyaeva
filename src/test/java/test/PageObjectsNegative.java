@@ -3,11 +3,11 @@ package test;
 
 import org.junit.jupiter.api.Test;
 import pages.FormPageObjects;
-import pages.components.ShouldHaveText;
+import pages.components.ResultTableComponent;
 
 public class PageObjectsNegative extends TestBase {
     FormPageObjects pageObjects = new FormPageObjects();
-    ShouldHaveText shouldHaveText = new ShouldHaveText();
+    ResultTableComponent resultTableComponent = new ResultTableComponent();
 
     @Test
     void fillFormTest() {
@@ -24,7 +24,7 @@ public class PageObjectsNegative extends TestBase {
                 .clickSubmit();
 
 
-        shouldHaveText.negativeCheck ();
+        resultTableComponent.negativeCheck ();
     }
 
 }

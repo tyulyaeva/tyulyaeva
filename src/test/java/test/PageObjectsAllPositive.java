@@ -2,11 +2,11 @@ package test;
 
 import org.junit.jupiter.api.Test;
 import pages.FormPageObjects;
-import pages.components.ShouldHaveText;
+import pages.components.ResultTableComponent;
 
 public class PageObjectsAllPositive extends TestBase {
     FormPageObjects pageObjects = new FormPageObjects();
-    ShouldHaveText shouldHaveText = new ShouldHaveText();
+    ResultTableComponent resultTableComponent = new ResultTableComponent();
 
     @Test
     void fillFormTest() {
@@ -25,7 +25,7 @@ public class PageObjectsAllPositive extends TestBase {
                 .setValueCity("Agra")
                 .clickSubmit();
 
-        shouldHaveText.checkResult("Student Name", "Инна Тюляева")
+        resultTableComponent.checkResult("Student Name", "Инна Тюляева")
                 .checkResult("Student Email", "tyulyaeva.inna@yandex.ru")
                 .checkResult("Gender", "Female")
                 .checkResult("Mobile", "9178332203")

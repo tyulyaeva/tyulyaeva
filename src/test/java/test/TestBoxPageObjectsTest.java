@@ -14,6 +14,9 @@ public class TestBoxPageObjectsTest extends TestBase{
                 .setCurrentAddress("Санкт-Петербург, п. Парглово")
                 .setPermanentAddress("Санкт-Петербург, п. Парглово 2")
                 .clickSubmit()
-                .textBoxResults();
+                .checkNameResult("Инна Тюляева")
+                .checkEmailResult("tyulyaeva.inna@yandex.ru")
+                .checkCurrentAddressResult("Санкт-Петербург, п. Парглово")
+                .checkPermanentAddressResult("Санкт-Петербург, п. Парглово 2");;
     }
 }
