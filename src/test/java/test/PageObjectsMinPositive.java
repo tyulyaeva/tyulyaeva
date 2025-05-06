@@ -6,7 +6,7 @@ import pages.components.ResultTableComponent;
 
 public class PageObjectsMinPositive extends TestBase {
     FormPageObjects pageObjects = new FormPageObjects();
-    ResultTableComponent shouldHaveText = new ResultTableComponent();
+    ResultTableComponent resultTableComponent = new ResultTableComponent();
 
     @Test
     void fillFormTest() {
@@ -17,7 +17,7 @@ public class PageObjectsMinPositive extends TestBase {
                 .setValueUserNumber("9178332203")
                 .clickSubmit();
 
-        shouldHaveText.checkResult("Student Name", "Инна Тюляева")
+        resultTableComponent.checkResult("Student Name", "Инна Тюляева")
                 .checkResult("Gender", "Female")
                 .checkResult("Mobile", "9178332203");
 

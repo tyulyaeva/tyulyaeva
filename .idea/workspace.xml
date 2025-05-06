@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5106766b-c18d-407a-b517-d5f70b215462" name="Changes" comment="PageObjects_Components_TextBoxTests_Fixed">
+      <change afterPath="$PROJECT_DIR$/src/test/java/utils/RandomizerData.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;tyulyaeva&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/tyulyaeva/tyulyaeva.git&quot;,
+    &quot;accountId&quot;: &quot;148b88f5-4968-4315-8375-36c6c1a695db&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2viJU31ZPtiKr2OaUHUoAOntVKQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.inna_tyulyaeva.Main.executor": "Run",
+    "Gradle.Build tyulyaeva.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.DragAndDrop.FifthLesson.executor": "Run",
+    "Gradle.DragAndDrop.FifthLesson1.executor": "Run",
+    "Gradle.DragAndDrop.FifthLesson2.executor": "Run",
+    "Gradle.DragAndDrop.executor": "Run",
+    "Gradle.DragAndDrop.fifthLesson1.executor": "Run",
+    "Gradle.FirstLesson.executor": "Run",
+    "Gradle.FirstLesson.successfulSearchTest.executor": "Run",
+    "Gradle.FormTests.executor": "Run",
+    "Gradle.FormTests.fillFormTest.executor": "Run",
+    "Gradle.HoverTest.FifthLesson.executor": "Run",
+    "Gradle.HoverTest.FourthLesson.executor": "Run",
+    "Gradle.HoverTest.executor": "Run",
+    "Gradle.PageObjects.executor": "Run",
+    "Gradle.PageObjects.fillFormTest.executor": "Run",
+    "Gradle.PageObjectsAllPositive.executor": "Run",
+    "Gradle.PageObjectsAllPositive.fillFormTest.executor": "Run",
+    "Gradle.PageObjectsMinPositive.executor": "Run",
+    "Gradle.PageObjectsMinPositive.fillFormTest.executor": "Run",
+    "Gradle.PageObjectsNegative.executor": "Run",
+    "Gradle.PageObjectsNegative.fillFormTest.executor": "Run",
+    "Gradle.SearchSelenide.FourthLesson.executor": "Run",
+    "Gradle.SearchSelenide.executor": "Run",
+    "Gradle.SearchTests.executor": "Run",
+    "Gradle.SearchTests.fillFormTest.executor": "Run",
+    "Gradle.TestBoxPageObjectsTest.executor": "Run",
+    "Gradle.TestBoxPageObjectsTest.successTextBoxPageTest.executor": "Run",
+    "Gradle.dragAndDrop.fifthLesson1.executor": "Run",
+    "Gradle.tyulyaeva [:Main.main()].executor": "Run",
+    "Gradle.tyulyaeva [:QAGURU_Tyulyaeva.Main.main()].executor": "Run",
+    "Gradle.tyulyaeva [:inna_tyulyaeva.Main.main()].executor": "Run",
+    "Gradle.tyulyaeva [:inna_tyulyaeva.Math.main()].executor": "Run",
+    "Gradle.tyulyaeva [:inna_tyulyaeva.MathOperations.main()].executor": "Run",
+    "Gradle.tyulyaeva.executor": "Run",
+    "JUnit.FakerDataTest.executor": "Run",
+    "JUnit.FakerDataTest.fillFormTest.executor": "Run",
+    "JUnit.FakerDataTest.fillFormTestNegative.executor": "Run",
+    "JUnit.FakerDataTest.registrationFormTest.executor": "Run",
+    "JUnit.PageObjectsAllPositive.executor": "Run",
+    "JUnit.PageObjectsAllPositive.fillFormTest.executor": "Run",
+    "JUnit.PageObjectsMinPositive.fillFormTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "onboarding.tips.debug.path": "/home/inna/IdeaProjects/tyulyaeva/src/main/java/QAGURU_Tyulyaeva/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "inlay.hints"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/Inna_tyulyaeva" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.FakerDataTest">
+    <configuration name="FakerDataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tyulyaeva.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.FakerDataTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FakerDataTest.fillFormTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tyulyaeva.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.FakerDataTest" />
+      <option name="METHOD_NAME" value="fillFormTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FakerDataTest.fillFormTestNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tyulyaeva.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.FakerDataTest" />
+      <option name="METHOD_NAME" value="fillFormTestNegative" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FakerDataTest.registrationFormTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tyulyaeva.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.FakerDataTest" />
+      <option name="METHOD_NAME" value="registrationFormTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PageObjectsMinPositive.fillFormTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tyulyaeva.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.PageObjectsMinPositive" />
+      <option name="METHOD_NAME" value="fillFormTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Tyulyaeva_QAGURU.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Tyulyaeva_QAGURU.main" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FakerDataTest" />
+        <item itemvalue="JUnit.PageObjectsMinPositive.fillFormTest" />
+        <item itemvalue="JUnit.FakerDataTest.fillFormTestNegative" />
+        <item itemvalue="JUnit.FakerDataTest.fillFormTest" />
+        <item itemvalue="JUnit.FakerDataTest.registrationFormTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5106766b-c18d-407a-b517-d5f70b215462" name="Changes" comment="" />
+      <created>1744621973946</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744621973946</updated>
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1744622968470</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744622968470</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init">
+      <option name="closed" value="true" />
+      <created>1744623185682</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744623185682</updated>
+    </task>
+    <task id="LOCAL-00003" summary="first">
+      <option name="closed" value="true" />
+      <created>1744823166641</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744823166641</updated>
+    </task>
+    <task id="LOCAL-00004" summary="second">
+      <option name="closed" value="true" />
+      <created>1744823677138</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744823677138</updated>
+    </task>
+    <task id="LOCAL-00005" summary="HoverTest">
+      <option name="closed" value="true" />
+      <created>1744911985617</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744911985617</updated>
+    </task>
+    <task id="LOCAL-00006" summary="DragAndDrop">
+      <option name="closed" value="true" />
+      <created>1744915705723</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744915705723</updated>
+    </task>
+    <task id="LOCAL-00007" summary="GoogleSerch">
+      <option name="closed" value="true" />
+      <created>1744977676684</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1744977676684</updated>
+    </task>
+    <task id="LOCAL-00008" summary="MathOperations">
+      <option name="closed" value="true" />
+      <created>1745244331694</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1745244331694</updated>
+    </task>
+    <task id="LOCAL-00009" summary="MathOperations">
+      <option name="closed" value="true" />
+      <created>1745244391612</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1745244391612</updated>
+    </task>
+    <task id="LOCAL-00010" summary="MathOperations">
+      <option name="closed" value="true" />
+      <created>1745244433632</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1745244433632</updated>
+    </task>
+    <task id="LOCAL-00011" summary="MathOperations">
+      <option name="closed" value="true" />
+      <created>1745244558790</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1745244558790</updated>
+    </task>
+    <task id="LOCAL-00012" summary="MathOperations">
+      <option name="closed" value="true" />
+      <created>1745244664761</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1745244664762</updated>
+    </task>
+    <task id="LOCAL-00013" summary="SuccessfulFormTest">
+      <option name="closed" value="true" />
+      <created>1745827094856</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1745827094856</updated>
+    </task>
+    <task id="LOCAL-00014" summary="SuccessfulFormTest1">
+      <option name="closed" value="true" />
+      <created>1745842833380</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1745842833380</updated>
+    </task>
+    <task id="LOCAL-00015" summary="SuccessfulFormTest2">
+      <option name="closed" value="true" />
+      <created>1745845293501</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1745845293501</updated>
+    </task>
+    <task id="LOCAL-00016" summary="PageObjects_Components">
+      <option name="closed" value="true" />
+      <created>1746214806743</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1746214806743</updated>
+    </task>
+    <task id="LOCAL-00017" summary="PageObjects_Components">
+      <option name="closed" value="true" />
+      <created>1746214919026</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1746214919026</updated>
+    </task>
+    <task id="LOCAL-00018" summary="PageObjects_Components_TextBoxTests">
+      <option name="closed" value="true" />
+      <created>1746216489074</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1746216489074</updated>
+    </task>
+    <task id="LOCAL-00019" summary="PageObjects_Components_TextBoxTests">
+      <option name="closed" value="true" />
+      <created>1746216727661</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1746216727661</updated>
+    </task>
+    <task id="LOCAL-00020" summary="PageObjects_Components_TextBoxTests_Fixed">
+      <option name="closed" value="true" />
+      <created>1746427608667</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1746427608667</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <MESSAGE value="first" />
+    <MESSAGE value="second" />
+    <MESSAGE value="HoverTest" />
+    <MESSAGE value="DragAndDrop" />
+    <MESSAGE value="GoogleSerch" />
+    <MESSAGE value="MathOperations" />
+    <MESSAGE value="SuccessfulFormTest" />
+    <MESSAGE value="SuccessfulFormTest1" />
+    <MESSAGE value="SuccessfulFormTest2" />
+    <MESSAGE value="PageObjects_Components" />
+    <MESSAGE value="PageObjects_Components_TextBoxTests" />
+    <MESSAGE value="PageObjects_Components_TextBoxTests_Fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="PageObjects_Components_TextBoxTests_Fixed" />
+  </component>
+</project>
