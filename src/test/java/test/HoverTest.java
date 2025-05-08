@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class HoverTest {
     @BeforeAll
-    static void beforeAll() {
+    static void setupConfig() {
         Configuration.browserSize = "1920x1080";
         baseUrl = "https://github.com/";
         Configuration.pageLoadStrategy = "eager";
