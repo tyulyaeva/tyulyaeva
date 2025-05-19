@@ -1,0 +1,11 @@
+{
+  "name": "Inna",
+  "age": 33,
+  "gender": "female",
+  "courses": ["Java", "AQA"],
+  "address": {
+    "country":"Russian Federation",
+    "city": "Saint-Peterburg",
+    "idRec": 200791
+  }
+}
