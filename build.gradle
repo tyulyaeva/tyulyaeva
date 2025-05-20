@@ -40,7 +40,7 @@ dependencies {
             'com.google.code.gson:gson:2.13.1',
             'org.slf4j:slf4j-simple:2.0.17',
             'com.opencsv:opencsv:5.9',
-            'io.qameta.allure:allure-selenide:2.29.1'
+            'io.qameta.allure:allure-selenide:2.21.0'
     )
 }
 
