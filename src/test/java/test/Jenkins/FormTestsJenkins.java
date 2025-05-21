@@ -1,6 +1,7 @@
 package test.Jenkins;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -19,7 +20,7 @@ public class FormTestsJenkins {
     static void setupConfig(){
         Configuration.browserSize = "1920x1080";
         SelenideLogger.addListener("allure", new AllureSelenide());
-        Configuration.baseUrl = "https://demoqa.com/";
+        Configuration.baseUrl = "https://demoqa.com/automation-practice-form";
         Configuration.pageLoadStrategy ="eager";
         Configuration.timeout = 10000;
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
@@ -38,6 +39,7 @@ public class FormTestsJenkins {
         Attachments.pageSource();
         Attachments.browserConsoleLogs();
         Attachments.addVideo();
+        Selenide.closeWebDriver();
     }
 
     @Tag("registration_form")
