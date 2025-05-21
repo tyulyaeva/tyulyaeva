@@ -40,7 +40,7 @@ public class FormTestsJenkins {
         Attachments.addVideo();
     }
 
-    @Tag("automation-practice-form")
+    @Tag("registration_form")
     @Feature("Форма регистрации 'automation-practice-form")
     @Story("Тестирование формы регистрации 'automation-practice-form")
     @Owner("inna_tyulyaeva")
