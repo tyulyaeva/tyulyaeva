@@ -15,7 +15,7 @@ public class WebStepsFakerDataTestJenkins {
 
         @Step("Открыть форму регистрации 'automation-practice-form'")
         public WebStepsFakerDataTestJenkins openMainPage() {
-        open("https://demoqa.com/automation-practice-form");
+        open("automation-practice-form");
         return this;
             }
 
