@@ -18,8 +18,8 @@ public class TestBase {
     private static final String SELENOID_LOGIN = System.getProperty("selenoid.login");
     private static final String SELENOID_PASSWORD = System.getProperty("selenoid.password");
 
-//    @BeforeAll
-//    static void setupConfig(){
+    @BeforeAll
+    static void setupConfig(){
 //        Configuration.browserSize = "1920x1080";
 //        SelenideLogger.addListener("allure", new AllureSelenide());
 //        Configuration.baseUrl = "https://demoqa.com/";
@@ -33,7 +33,12 @@ public class TestBase {
 //                "enableVideo", true
 //        ));
 //        Configuration.browserCapabilities = capabilities;
-//    }
+    Configuration.browser = System.getProperty("browser", "chrome");
+    Configuration.browserVersion = System.getProperty("browser.version", "128.0");
+    Configuration.browserSize = System.getProperty("browser.size", "1920x1080");
+    Configuration.baseUrl = "https://demoqa.com";
+    Configuration.pageLoadStrategy = "eager";
+    }
 
     @BeforeEach
     public void beforeEach() {
