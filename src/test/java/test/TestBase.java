@@ -33,8 +33,6 @@ public class TestBase {
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
         Configuration.holdBrowserOpen = false;
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
     }
 
     @BeforeEach
