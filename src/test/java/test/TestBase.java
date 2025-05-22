@@ -13,6 +13,8 @@ import test.Jenkins.Attachments;
 import java.util.Map;
 import java.util.UUID;
 
+import static com.codeborne.selenide.Selenide.executeJavaScript;
+
 public class TestBase {
     String selenoidUserLogin = System.getProperty("selenoidUserLogin", "user1");
     String selenoidUserPassword = System.getProperty("selenoidUserPassword", "1234");
@@ -31,6 +33,8 @@ public class TestBase {
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
         Configuration.holdBrowserOpen = false;
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
     }
 
     @BeforeEach
