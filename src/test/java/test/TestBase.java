@@ -1,7 +1,5 @@
 package test;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;

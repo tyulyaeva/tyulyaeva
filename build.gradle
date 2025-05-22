@@ -63,13 +63,13 @@ tasks.withType(Test) {
     }
 }
 
-    task registration_form_test(type: Test) {
+    task registration_form(type: Test) {
         useJUnitPlatform {
             includeTags("registration_form")
         }
     }
 
-    task demoqa_test(type: Test) {
+    task demoqa(type: Test) {
         useJUnitPlatform {
             includeTags("demoqa")
         }
