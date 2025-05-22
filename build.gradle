@@ -56,7 +56,17 @@ tasks.withType(Test) {
         }
     }
 }
+task registration_form(type: Test) {
+    useJUnitPlatform {
+        includeTags("registration_form")
+    }
+}
 
+task demoqa(type: Test) {
+    useJUnitPlatform {
+        includeTags("demoqa")
+    }
+}
 
 
 
