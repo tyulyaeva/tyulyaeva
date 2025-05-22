@@ -66,21 +66,10 @@ test {
             includeTags("registration_form")
         }
     }
-    task all_registration_form_test(type: Test) {
-        useJUnitPlatform {
-            includeTags("all_positive_registration_form")
-        }
-    }
 
-    task min_registration_form_test(type: Test) {
+    task demoqa_test(type: Test) {
         useJUnitPlatform {
-            includeTags("min_positive_registration_form")
-        }
-    }
-
-    task negative_registration_form_test(type: Test) {
-        useJUnitPlatform {
-            includeTags("negative_registration_form")
+            includeTags("demoqa")
         }
     }
 }

@@ -42,7 +42,7 @@ public class FakerDataTestJenkins extends TestBase {
         Selenide.closeWebDriver();
     }
 
-    @Tag("all_positive_registration_form")
+    @Tag("demoqa")
     @Feature("Форма регистрации 'automation-practice-form")
     @Story("Тестирование формы регистрации 'automation-practice-form")
     @Owner("inna_tyulyaeva")
@@ -56,7 +56,7 @@ public class FakerDataTestJenkins extends TestBase {
                 .checkAllValueFormTest ();
     }
 
-    @Tag("min_positive_registration_form")
+    @Tag("demoqa")
     @Feature("Форма регистрации 'automation-practice-form")
     @Story("Тестирование формы регистрации 'automation-practice-form")
     @Owner("inna_tyulyaeva")
@@ -70,7 +70,7 @@ public class FakerDataTestJenkins extends TestBase {
                 .checkMinValueFormTest ();
     }
 
-    @Tag("negative_registration_form")
+    @Tag("demoqa")
     @Feature("Форма регистрации 'automation-practice-form")
     @Story("Тестирование формы регистрации 'automation-practice-form")
     @Owner("inna_tyulyaeva")
