@@ -8,12 +8,11 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import test.Jenkins.Attachments;
+//import test.Jenkins.Attachments;
 
 import java.util.Map;
 import java.util.UUID;
 
-import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class TestBase {
     String selenoidUserLogin = System.getProperty("selenoidUserLogin", "user1");
