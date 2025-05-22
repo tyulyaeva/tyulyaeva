@@ -51,6 +51,7 @@ public class TestBase {
     void addAttachments() {
         Attachments.screenshotAs("Last screenshot");
         Attachments.pageSource();
+        if (!Configuration.browser.equals("firefox"))
         Attachments.browserConsoleLogs();
         Attachments.addVideo();
         Selenide.closeWebDriver();
