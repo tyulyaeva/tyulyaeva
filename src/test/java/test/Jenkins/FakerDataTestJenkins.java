@@ -11,7 +11,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import test.TestBase;
 
 import java.util.Map;
-import java.util.UUID;
 
 @DisplayName("Allure/Jenkins FakerData тест")
 
@@ -22,27 +21,19 @@ public class FakerDataTestJenkins extends TestBase {
 
     @BeforeAll
     static void setupConfig(){
-        Configuration.remote = "https://" + SELENOID_LOGIN + ":" + SELENOID_PASSWORD + "@" + SELENOID_URL + "/wd/hub";
+        Configuration.browserSize = "1920x1080";
+        SelenideLogger.addListener("allure", new AllureSelenide());
+        Configuration.baseUrl = "https://demoqa.com/";
+        Configuration.pageLoadStrategy ="eager";
+        Configuration.timeout = 10000;
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
-                "enableVideo", true,
-                "name", "Test: " + UUID.randomUUID()
+                "enableVideo", true
         ));
-        Configuration.browserSize = "1920x1080";
-        SelenideLogger.addListener("allure", new AllureSelenide());
-       // Configuration.baseUrl = "https://demoqa.com/";
-        Configuration.pageLoadStrategy ="eager";
-        Configuration.timeout = 10000;
-        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-
-
-//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-//                "enableVNC", true,
-//                "enableVideo", true
-//        ));
         Configuration.browserCapabilities = capabilities;
-        Configuration.holdBrowserOpen = false;
     }
 
     @AfterEach
