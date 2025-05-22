@@ -20,6 +20,14 @@ public class TestBase {
 //    private static final String SELENOID_LOGIN = System.getProperty("selenoid.login");
 //    private static final String SELENOID_PASSWORD = System.getProperty("selenoid.password");
 
+    String selenoidUserLogin = System.getProperty("selenoidUserLogin", "user1");
+    String selenoidUserPassword = System.getProperty("selenoidUserPassword", "1234");
+    String selenoidRemoteServerUrl = System.getProperty(
+            "selenoidRemoteServerUrl", "selenoid.autotests.cloud");
+    static String browser = System.getProperty("browser", "chrome");
+    static String browserVersion = System.getProperty("browserVersion", "128.0");
+    static String browserSize = System.getProperty("browserResolution", "1920x1080");
+
     @BeforeAll
     static void setupConfig(){
 //        Configuration.browserSize = "1920x1080";
@@ -35,53 +43,61 @@ public class TestBase {
 //                "enableVideo", true
 //        ));
 //        Configuration.browserCapabilities = capabilities;
-        String selenoidHost = System.getProperty("selenoid_host", "selenoid.autotests.cloud");
-        String selenoidLogin = System.getProperty("selenoid_login", "user1");
-        String selenoidPassword = System.getProperty("selenoid_password", "1234");
-        String browser = System.getProperty("browser", "chrome");
-        String browserVersion = System.getProperty("browserVersion", "127.0");
-        String screenResolution = System.getProperty("screenResolution", "1920x1080");
-
-        WebDriverManager.chromedriver()
-                .clearDriverCache()
-                .clearResolutionCache()
-                .setup();
-
-        Configuration.baseUrl = "https://demoqa.com/";
-        Configuration.browserSize = screenResolution;
         Configuration.browser = browser;
         Configuration.browserVersion = browserVersion;
+        Configuration.browserSize = browserSize;
+        Configuration.baseUrl = "https://demoqa.com/";
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
-        Configuration.remote = String.format("https://%s:%s@%s/wd/hub",
-                selenoidLogin,
-                selenoidPassword,
-                selenoidHost);
+        Configuration.holdBrowserOpen = false;
+
+//        String selenoidHost = System.getProperty("selenoid_host", "selenoid.autotests.cloud");
+//        String selenoidLogin = System.getProperty("selenoid_login", "user1");
+//        String selenoidPassword = System.getProperty("selenoid_password", "1234");
+//        String browser = System.getProperty("browser", "chrome");
+//        String browserVersion = System.getProperty("browserVersion", "127.0");
+//        String screenResolution = System.getProperty("screenResolution", "1920x1080");
+//
+//        WebDriverManager.chromedriver()
+//                .clearDriverCache()
+//                .clearResolutionCache()
+//                .setup();
+//
+//        Configuration.baseUrl = "https://demoqa.com/";
+//        Configuration.browserSize = screenResolution;
+//        Configuration.browser = browser;
+//        Configuration.browserVersion = browserVersion;
+//        Configuration.pageLoadStrategy = "eager";
+//        Configuration.timeout = 10000;
+//        Configuration.remote = String.format("https://%s:%s@%s/wd/hub",
+//                selenoidLogin,
+//                selenoidPassword,
+//                selenoidHost);
 
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
-        Configuration.browserCapabilities = capabilities;
-
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
-
-//    @BeforeEach
-//    public void beforeEach() {
-//        SelenideLogger.addListener("allure", new AllureSelenide());
 //        DesiredCapabilities capabilities = new DesiredCapabilities();
 //        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
 //                "enableVNC", true,
-//                "enableVideo", true,
-//                "name", "Test: " + UUID.randomUUID()
+//                "enableVideo", true
 //        ));
-//        Configuration.remote = "https://" + SELENOID_LOGIN + ":" + SELENOID_PASSWORD + "@" + SELENOID_URL + "/wd/hub";
 //        Configuration.browserCapabilities = capabilities;
-//        Configuration.holdBrowserOpen = false;
-//    }
+//
+//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
+
+    @BeforeEach
+    public void beforeEach() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true,
+                "name", "Test: " + UUID.randomUUID()
+        ));
+        Configuration.remote = "https://" +
+                selenoidUserLogin + ":" + selenoidUserPassword +"@" + selenoidRemoteServerUrl + "/wd/hub";        Configuration.browserCapabilities = capabilities;
+        Configuration.holdBrowserOpen = false;
+    }
 
     @AfterEach
     void addAttachments() {

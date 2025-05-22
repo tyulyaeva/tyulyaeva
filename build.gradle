@@ -40,8 +40,7 @@ dependencies {
             'com.google.code.gson:gson:2.13.1',
             'org.slf4j:slf4j-simple:2.0.17',
             'com.opencsv:opencsv:5.9',
-            'io.qameta.allure:allure-selenide:2.21.0',
-            'io.github.bonigarcia:webdrivermanager:5.8.0'
+            'io.qameta.allure:allure-selenide:2.21.0'
     )
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.9.0')
 }
@@ -64,11 +63,11 @@ tasks.withType(Test) {
     }
 }
 
-//    task registration_form_test(type: Test) {
-//        useJUnitPlatform {
-//            includeTags("registration_form")
-//        }
-//    }
+    task registration_form_test(type: Test) {
+        useJUnitPlatform {
+            includeTags("registration_form")
+        }
+    }
 
     task demoqa_test(type: Test) {
         useJUnitPlatform {
