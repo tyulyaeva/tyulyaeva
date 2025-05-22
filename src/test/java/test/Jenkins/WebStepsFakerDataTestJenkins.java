@@ -33,8 +33,9 @@ public class WebStepsFakerDataTestJenkins {
                     .setValueUploadPicture(dataForTest.uploadPictureInput)
                     .setValueCurrentAddress(dataForTest.currentAddressInput)
                     .setValueState(dataForTest.stateInput)
-                    .setValueCity(dataForTest.cityInput)
-                    .clickSubmit();
+                    .setValueCity(dataForTest.cityInput);
+                    $("#state").scrollIntoView(true).click();
+                    pageObjects.clickSubmit();
             return this;
     }
         @Step("Проверка заполнения формы регистрации 'automation-practice-form'")
@@ -59,8 +60,8 @@ public class WebStepsFakerDataTestJenkins {
                 .setValueLastName(dataForTest.lastNameInput)
                 .setValueGenterWrapper(dataForTest.genterWrapperInput)
                 .setValueUserNumber(dataForTest.userNumberInput);
-        $("#state").scrollIntoView(true).click();
-        pageObjects.clickSubmit();
+                $("#state").scrollIntoView(true).click();
+                pageObjects.clickSubmit();
         return this;
     }
     @Step("Проверка заполнения формы регистрации 'automation-practice-form' только обязательные параметры валидными значениями")
@@ -82,8 +83,9 @@ public class WebStepsFakerDataTestJenkins {
                 .setValueUploadPicture(dataForTest.uploadPictureInput)
                 .setValueCurrentAddress(dataForTest.currentAddressInput)
                 .setValueState(dataForTest.stateInput)
-                .setValueCity(dataForTest.cityInput)
-                .clickSubmit();
+                .setValueCity(dataForTest.cityInput);
+                $("#state").scrollIntoView(true).click();
+                pageObjects.clickSubmit();
         return this;
     }
     @Step("Проверка заполнения на форме регистрации 'automation-practice-form' параметра невалидным значением")

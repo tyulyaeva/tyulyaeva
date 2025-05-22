@@ -12,7 +12,7 @@ import test.TestBase;
 
 import java.util.Map;
 
-@DisplayName("Allure/Jenkins тест")
+@DisplayName("Allure/Jenkins FakerData тест")
 
 public class FakerDataTestJenkins extends TestBase {
 

@@ -31,6 +31,7 @@ public class WebGithubStepsJenkins {
             $("#currentAddress").setValue("Санкт-Петербург, п. Парглово").pressEnter();
             $("#react-select-3-input").setValue("Uttar Pradesh").pressEnter();
             $("#react-select-4-input").setValue("Agra").pressEnter();
+            $("#state").scrollIntoView(true).click();
             $("#submit").click();
             return this;
     }
