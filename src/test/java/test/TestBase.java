@@ -14,10 +14,6 @@ import java.util.Map;
 import java.util.UUID;
 
 public class TestBase {
-//    private static final String SELENOID_URL = System.getProperty("selenoid.url");
-//    private static final String SELENOID_LOGIN = System.getProperty("selenoid.login");
-//    private static final String SELENOID_PASSWORD = System.getProperty("selenoid.password");
-
     String selenoidUserLogin = System.getProperty("selenoidUserLogin", "user1");
     String selenoidUserPassword = System.getProperty("selenoidUserPassword", "1234");
     String selenoidRemoteServerUrl = System.getProperty(
@@ -28,19 +24,6 @@ public class TestBase {
 
     @BeforeAll
     static void setupConfig(){
-//        Configuration.browserSize = "1920x1080";
-//        SelenideLogger.addListener("allure", new AllureSelenide());
-//        Configuration.baseUrl = "https://demoqa.com/";
-//        Configuration.pageLoadStrategy ="eager";
-//        Configuration.timeout = 10000;
-//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-//
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-//                "enableVNC", true,
-//                "enableVideo", true
-//        ));
-//        Configuration.browserCapabilities = capabilities;
         Configuration.browser = browser;
         Configuration.browserVersion = browserVersion;
         Configuration.browserSize = browserSize;
@@ -48,39 +31,6 @@ public class TestBase {
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000;
         Configuration.holdBrowserOpen = false;
-
-//        String selenoidHost = System.getProperty("selenoid_host", "selenoid.autotests.cloud");
-//        String selenoidLogin = System.getProperty("selenoid_login", "user1");
-//        String selenoidPassword = System.getProperty("selenoid_password", "1234");
-//        String browser = System.getProperty("browser", "chrome");
-//        String browserVersion = System.getProperty("browserVersion", "127.0");
-//        String screenResolution = System.getProperty("screenResolution", "1920x1080");
-//
-//        WebDriverManager.chromedriver()
-//                .clearDriverCache()
-//                .clearResolutionCache()
-//                .setup();
-//
-//        Configuration.baseUrl = "https://demoqa.com/";
-//        Configuration.browserSize = screenResolution;
-//        Configuration.browser = browser;
-//        Configuration.browserVersion = browserVersion;
-//        Configuration.pageLoadStrategy = "eager";
-//        Configuration.timeout = 10000;
-//        Configuration.remote = String.format("https://%s:%s@%s/wd/hub",
-//                selenoidLogin,
-//                selenoidPassword,
-//                selenoidHost);
-
-
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-//                "enableVNC", true,
-//                "enableVideo", true
-//        ));
-//        Configuration.browserCapabilities = capabilities;
-//
-//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 
     @BeforeEach
