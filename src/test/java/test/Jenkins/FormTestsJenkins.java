@@ -9,38 +9,39 @@ import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import test.TestBase;
 
 import java.util.Map;
 
 @DisplayName("Allure/Jenkins тест")
 
-public class FormTestsJenkins {
+public class FormTestsJenkins  extends TestBase {
 
-    @BeforeAll
-    static void setupConfig(){
-        Configuration.browserSize = "1920x1080";
-        SelenideLogger.addListener("allure", new AllureSelenide());
-        Configuration.baseUrl = "https://demoqa.com/";
-        Configuration.pageLoadStrategy ="eager";
-        Configuration.timeout = 10000;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
-        Configuration.browserCapabilities = capabilities;
-    }
-
-    @AfterEach
-    void addAttachments() {
-        Attachments.screenshotAs("Last screenshot");
-        Attachments.pageSource();
-        Attachments.browserConsoleLogs();
-        Attachments.addVideo();
-        Selenide.closeWebDriver();
-    }
+//    @BeforeAll
+//    static void setupConfig(){
+//        Configuration.browserSize = "1920x1080";
+//        SelenideLogger.addListener("allure", new AllureSelenide());
+//        Configuration.baseUrl = "https://demoqa.com/";
+//        Configuration.pageLoadStrategy ="eager";
+//        Configuration.timeout = 10000;
+//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+//
+//        DesiredCapabilities capabilities = new DesiredCapabilities();
+//        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+//                "enableVNC", true,
+//                "enableVideo", true
+//        ));
+//        Configuration.browserCapabilities = capabilities;
+//    }
+//
+//    @AfterEach
+//    void addAttachments() {
+//        Attachments.screenshotAs("Last screenshot");
+//        Attachments.pageSource();
+//        Attachments.browserConsoleLogs();
+//        Attachments.addVideo();
+//        Selenide.closeWebDriver();
+//    }
 
     @Tag("registration_form")
     @Feature("Форма регистрации 'automation-practice-form")

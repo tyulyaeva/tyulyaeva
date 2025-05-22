@@ -15,9 +15,6 @@ import java.util.Map;
 @DisplayName("Allure/Jenkins FakerData тест")
 
 public class FakerDataTestJenkins extends TestBase {
-//    private static final String SELENOID_URL = System.getProperty("selenoid.url");
-//    private static final String SELENOID_LOGIN = System.getProperty("selenoid.login");
-//    private static final String SELENOID_PASSWORD = System.getProperty("selenoid.password");
 
 //    @BeforeAll
 //    static void setupConfig(){
