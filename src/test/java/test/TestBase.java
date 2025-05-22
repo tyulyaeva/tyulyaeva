@@ -14,13 +14,13 @@ import java.util.Map;
 import java.util.UUID;
 
 public class TestBase {
-    String selenoidUserLogin = System.getProperty("selenoidUserLogin", "user1");
-    String selenoidUserPassword = System.getProperty("selenoidUserPassword", "1234");
-    String selenoidRemoteServerUrl = System.getProperty(
-            "selenoidRemoteServerUrl", "selenoid.autotests.cloud");
+    String SELENOID_LOGIN = System.getProperty("selenoidLogin", "user1");
+    String SELENOID_PASSWORD = System.getProperty("selenoidPassword", "1234");
+    String SELENOID_URL = System.getProperty(
+            "SELENOID_URL", "selenoid.autotests.cloud");
     static String browser = System.getProperty("browser", "chrome");
     static String browserVersion = System.getProperty("browserVersion", "128.0");
-    static String browserSize = System.getProperty("browserResolution", "1920x1080");
+    static String browserSize = System.getProperty("browserSize", "1920x1080");
 
     @BeforeAll
     static void setupConfig(){
@@ -43,7 +43,7 @@ public class TestBase {
                 "name", "Test: " + UUID.randomUUID()
         ));
         Configuration.remote = "https://" +
-                selenoidUserLogin + ":" + selenoidUserPassword +"@" + selenoidRemoteServerUrl + "/wd/hub";        Configuration.browserCapabilities = capabilities;
+                SELENOID_LOGIN + ":" + SELENOID_PASSWORD +"@" + SELENOID_URL + "/wd/hub";        Configuration.browserCapabilities = capabilities;
         Configuration.holdBrowserOpen = false;
     }
 
@@ -51,7 +51,6 @@ public class TestBase {
     void addAttachments() {
         Attachments.screenshotAs("Last screenshot");
         Attachments.pageSource();
-        if (!Configuration.browser.equals("firefox"))
         Attachments.browserConsoleLogs();
         Attachments.addVideo();
         Selenide.closeWebDriver();
