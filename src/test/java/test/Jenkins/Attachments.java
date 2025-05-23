@@ -2,6 +2,7 @@ package test.Jenkins;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
+import static com.codeborne.selenide.WebDriverRunner.isFirefox;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -30,6 +31,9 @@ public class Attachments {
     }
 
     public static void browserConsoleLogs() {
+        if (isFirefox()) {
+            return;
+        }
         attachAsText(
                 "Browser console logs",
                 String.join("\n", Selenide.getWebDriverLogs(BROWSER))
