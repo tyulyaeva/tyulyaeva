@@ -41,7 +41,7 @@ public class RestApiTests extends TestBaseApi {
                 .when()
                 .post(userPath)
                 .then()
-                .statusCode(HTTP_CREATED)
+                .statusCode(201)
                 .body("name", is("Inna Tyulyaeva"))
                 .body("year", is("1991"))
                 .body("job", is("QA"))
@@ -59,7 +59,7 @@ public class RestApiTests extends TestBaseApi {
                 .delete(userPath + newRegisteredUserId)
                 .then()
                 .log().status()
-                .statusCode(HTTP_NO_CONTENT);
+                .statusCode(204);
     }
 
     @Test
@@ -77,7 +77,7 @@ public class RestApiTests extends TestBaseApi {
                 .when()
                 .post(userRegister)
                 .then()
-                .statusCode(HTTP_OK)
+                .statusCode(200)
                 .log().all();
     }
 
@@ -96,7 +96,7 @@ public class RestApiTests extends TestBaseApi {
                 .when()
                 .post(userLogin)
                 .then()
-                .statusCode(HTTP_OK)
+                .statusCode(200)
                 .log().all();
     }
 
@@ -112,7 +112,7 @@ public class RestApiTests extends TestBaseApi {
                 .when()
                 .put(userPath + newRegisteredUserId)
                 .then()
-                .statusCode(HTTP_OK)
+                .statusCode(200)
                 .body("name", is("Inna Tyulyaeva_1"))
                 .body("year", is("1990"))
                 .body("job", is("QA_1"))
@@ -131,7 +131,7 @@ public class RestApiTests extends TestBaseApi {
                 .when()
                 .patch(userPath + newRegisteredUserId)
                 .then()
-                .statusCode(HTTP_OK)
+                .statusCode(200)
                 .body("year", is("1992"))
                 .log().all();
     }
