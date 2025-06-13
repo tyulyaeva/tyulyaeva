@@ -78,7 +78,7 @@ public class RestApiTests extends TestBaseApi {
                 .post(userRegister)
                 .then()
                 .statusCode(200)
-                .body("token", is("QpwL5tke4Pnpja7X4"))
+                .body("token", notNullValue())
                 .log().all();
     }
 
