@@ -1,11 +1,15 @@
 plugins {
     id 'java-library'
     id('io.qameta.allure') version '2.12.0'
+    id "io.freefair.lombok" version "6.0.0-m2"
 }
+
+def restAssuredVersion = "5.3.1",
+    allureVersion = "2.21.0"
 
 allure {
     report {
-        version.set("2.21.0")
+        version.set(allureVersion)
     }
     adapter { // отвечает за появление папочки build/allure-results
         aspectjWeaver.set(true) //обработка аннотации @Step
@@ -26,7 +30,10 @@ repositories {
 
 dependencies {
     testImplementation (
+            "io.rest-assured:rest-assured:$restAssuredVersion",
             "org.selenide:selenide-selenoid:2.3.4",
+            "io.rest-assured:json-schema-validator:$restAssuredVersion",
+            "io.qameta.allure:allure-rest-assured:$allureVersion",
             "com.codeborne:selenide:6.19.1",
             "org.junit.jupiter:junit-jupiter:5.9.3",
             "com.github.javafaker:javafaker:1.0.2",
@@ -40,7 +47,6 @@ dependencies {
             'com.google.code.gson:gson:2.13.1',
             'org.slf4j:slf4j-simple:2.0.17',
             'com.opencsv:opencsv:5.9',
-            'io.rest-assured:rest-assured:5.3.1',
             'io.qameta.allure:allure-selenide:2.21.0'
     )
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.9.0')
@@ -69,5 +75,10 @@ task demoqa(type: Test) {
     }
 }
 
+task rest_api(type: Test) {
+    useJUnitPlatform {
+        includeTags("rest_api")
+    }
+}
 
 
