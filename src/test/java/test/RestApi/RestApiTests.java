@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
 import static io.restassured.http.ContentType.JSON;
-import static java.net.HttpURLConnection.*;
 import static org.hamcrest.Matchers.*;
 
 @Tag("REST Assured Tests")

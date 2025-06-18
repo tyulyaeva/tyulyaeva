@@ -1,7 +1,7 @@
 package test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import model.StudentPersonData;
+import models.StudentPersonData;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
