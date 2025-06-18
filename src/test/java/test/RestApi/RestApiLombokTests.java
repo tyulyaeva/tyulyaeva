@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
 import static io.qameta.allure.Allure.step;
-import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.RestApiSpec.*;
 import static specs.RestApiSpec.baseRequestSpecification;
