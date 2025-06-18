@@ -1,5 +1,6 @@
 package test.RestApi;
-import model.lombok.*;
+
+import models.lombok.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -7,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.*;
 import static io.qameta.allure.Allure.step;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static specs.RestApiSpec.*;
 import static specs.RestApiSpec.baseRequestSpecification;
 
@@ -21,7 +23,7 @@ public class RestApiLombokTests extends TestBaseApi {
     @Test
     @Tag("rest_api")
     @DisplayName("1. Поиск зарегистрированного пользователя: Get - Single user")
-    void getSingleRegisteredUserTest(){
+    void getSingleRegisteredUserTest() {
         GetResponseSingleUserModel response = step("Запрос на поиск зарегистрированного пользователя", () ->
                 given(baseRequestSpecification)
                         .when()
@@ -65,11 +67,11 @@ public class RestApiLombokTests extends TestBaseApi {
     void deleteRegisteredUserTest() {
         String response = step("Запрос на удаление зарегистрированного пользователя", () ->
                 given(baseRequestSpecification)
-                .when()
-                .delete(userPath + newRegisteredUserId)
-                .then()
-                .spec(Specification204)
-                .extract().asString());
+                        .when()
+                        .delete(userPath + newRegisteredUserId)
+                        .then()
+                        .spec(Specification204)
+                        .extract().asString());
         step("Проверка запроса", () -> {
             assertEquals("", response, "Ответ: No Content");
         });
@@ -104,7 +106,7 @@ public class RestApiLombokTests extends TestBaseApi {
         LoginBodyModel authData = new LoginBodyModel();
         authData.setEmail(userEmail);
         authData.setPassword(userPassLogin);
-        LoginResponseModel response = step("Запрос на авторизацию зарегистрированного пользователя", ()->
+        LoginResponseModel response = step("Запрос на авторизацию зарегистрированного пользователя", () ->
                 given(baseRequestSpecification)
                         .body(authData)
                         .when()
@@ -112,8 +114,10 @@ public class RestApiLombokTests extends TestBaseApi {
                         .then()
                         .spec(Specification200)
                         .extract().as(LoginResponseModel.class));
-        step("Проверка запроса", ()->
-                assertEquals("QpwL5tke4Pnpja7X4", response.getToken()));
+        step("Проверка запроса", () ->{
+                assertNotEquals(null,response.getToken());
+                assertEquals("QpwL5tke4Pnpja7X4", response.getToken());
+        });
     }
 
     @Test
@@ -133,9 +137,9 @@ public class RestApiLombokTests extends TestBaseApi {
                         .spec(Specification200)
                         .extract().as(DataResponseModel.class));
         step("Проверка запроса", () -> {
-                assertEquals("Inna Tyulyaeva_1", response.getName());
-        assertEquals("1990", response.getYear());
-        assertEquals("QA_1", response.getJob());
+            assertEquals("Inna Tyulyaeva_1", response.getName());
+            assertEquals("1990", response.getYear());
+            assertEquals("QA_1", response.getJob());
         });
     }
 
