@@ -9,7 +9,7 @@ import static io.restassured.RestAssured.*;
 import static io.qameta.allure.Allure.step;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static specs.RestApiSpec.*;
+import static specs.RestApiSpec.baseResponseSpecification;
 import static specs.RestApiSpec.baseRequestSpecification;
 
 @Tag("REST Assured Tests")
@@ -29,9 +29,10 @@ public class RestApiLombokTests extends TestBaseApi {
                         .when()
                         .get(userPath + registeredUserId)
                         .then()
-                        .spec(Specification200)
+                        .spec(baseResponseSpecification(200))
                         .extract().as(GetResponseSingleUserModel.class));
         step("Проверка ответа", () -> {
+
             assertEquals(registeredUserId, response.getData().getId());
             assertEquals(getUserEmail, response.getData().getEmail());
         });
@@ -41,17 +42,14 @@ public class RestApiLombokTests extends TestBaseApi {
     @Tag("rest_api")
     @DisplayName("2. Регистрация нового пользователя: Post - Create")
     void postCreateNewUserTest() {
-        CreateUserModels authData = new CreateUserModels();
-        authData.setName("Inna Tyulyaeva");
-        authData.setJob("QA");
-        authData.setYear("1991");
+        CreateUserModels authData = new CreateUserModels("Inna Tyulyaeva", "QA", "1991");
         CreateResponseUserModel response = step("Запрос на регистрацию нового пользователя", () ->
                 given(baseRequestSpecification)
                         .body(authData)
                         .when()
                         .post(userPath)
                         .then()
-                        .spec(Specification201)
+                        .spec(baseResponseSpecification(201))
                         .extract().as(CreateResponseUserModel.class));
 
         step("Проверка запроса", () -> {
@@ -70,7 +68,7 @@ public class RestApiLombokTests extends TestBaseApi {
                         .when()
                         .delete(userPath + newRegisteredUserId)
                         .then()
-                        .spec(Specification204)
+                        .spec(baseResponseSpecification(204))
                         .extract().asString());
         step("Проверка запроса", () -> {
             assertEquals("", response, "Ответ: No Content");
@@ -90,7 +88,7 @@ public class RestApiLombokTests extends TestBaseApi {
                         .when()
                         .post(userRegister)
                         .then()
-                        .spec(Specification200)
+                        .spec(baseResponseSpecification(200))
                         .extract().as(PostResponseRegisterSuccessfulModel.class));
 
         step("Проверка запроса", () -> {
@@ -112,7 +110,7 @@ public class RestApiLombokTests extends TestBaseApi {
                         .when()
                         .post(userLogin)
                         .then()
-                        .spec(Specification200)
+                        .spec(baseResponseSpecification(200))
                         .extract().as(LoginResponseModel.class));
         step("Проверка запроса", () ->{
                 assertNotEquals(null,response.getToken());
@@ -124,17 +122,14 @@ public class RestApiLombokTests extends TestBaseApi {
     @Tag("rest_api")
     @DisplayName("6. Обновление значений параметров зарегистрированного пользователя: Put - Update")
     void updatingUsersInfoTest() {
-        DataBodyLombokModel bodyDate = new DataBodyLombokModel();
-        bodyDate.setName("Inna Tyulyaeva_1");
-        bodyDate.setYear("1990");
-        bodyDate.setJob("QA_1");
+        DataBodyLombokModel bodyDate = new DataBodyLombokModel("Inna Tyulyaeva_1", "1990", "QA_1");
         DataResponseModel response = step("Запрос на обновление значений параметров зарегистрированного пользователя", () ->
                 given(baseRequestSpecification)
                         .body(bodyDate)
                         .when()
                         .put(userPath + newRegisteredUserId)
                         .then()
-                        .spec(Specification200)
+                        .spec(baseResponseSpecification(200))
                         .extract().as(DataResponseModel.class));
         step("Проверка запроса", () -> {
             assertEquals("Inna Tyulyaeva_1", response.getName());
@@ -147,15 +142,14 @@ public class RestApiLombokTests extends TestBaseApi {
     @Tag("rest_api")
     @DisplayName("7. Обновление значений параметров зарегистрированного пользователя: Patch - Update")
     void patchingUsersJobTest() {
-        DataBodyLombokModel bodyDate = new DataBodyLombokModel();
-        bodyDate.setYear("1992");
+        DataBodyLombokModel bodyDate = new DataBodyLombokModel("","1992","");
         DataResponseModel response = step("Запрос на обновление значений параметров зарегистрированного пользователя", () ->
                 given(baseRequestSpecification)
                         .body(bodyDate)
                         .when()
                         .patch(userPath + newRegisteredUserId)
                         .then()
-                        .spec(Specification200)
+                        .spec(baseResponseSpecification(200))
                         .extract().as(DataResponseModel.class));
         step("Проверка запроса", () -> {
             assertEquals("1992", response.getYear());

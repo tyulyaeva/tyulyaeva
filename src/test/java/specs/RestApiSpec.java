@@ -18,21 +18,12 @@ public class RestApiSpec extends TestBaseApi {
             .log().all()
             .contentType(JSON);
 
-    public static ResponseSpecification Specification201 = new ResponseSpecBuilder()
-            .expectStatusCode(201)
+    public static ResponseSpecification baseResponseSpecification (int statusCode)
+    {
+        return new ResponseSpecBuilder()
+            .expectStatusCode(statusCode)
             .log(STATUS)
             .log(BODY)
             .build();
-
-    public static ResponseSpecification Specification200 = new ResponseSpecBuilder()
-            .expectStatusCode(200)
-            .log(STATUS)
-            .log(BODY)
-            .build();
-
-    public static ResponseSpecification Specification204 = new ResponseSpecBuilder()
-            .expectStatusCode(204)
-            .log(STATUS)
-            .log(BODY)
-            .build();
+    }
 }
