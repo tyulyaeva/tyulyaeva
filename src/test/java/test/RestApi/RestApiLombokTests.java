@@ -79,9 +79,7 @@ public class RestApiLombokTests extends TestBaseApi {
     @Tag("rest_api")
     @DisplayName("4. Регистрация пользователя: Post - Register - successful ")
     void postRegisterSuccessfulUserTest() {
-        PostRegisterSuccessfulModel authData = new PostRegisterSuccessfulModel();
-        authData.setEmail(userEmail);
-        authData.setPassword(userPass);
+        PostRegisterSuccessfulModel authData = new PostRegisterSuccessfulModel(userEmail, userPass);
         PostResponseRegisterSuccessfulModel response = step("Запрос на регистрацию нового пользователя", () ->
                 given(baseRequestSpecification)
                         .body(authData)
@@ -101,9 +99,7 @@ public class RestApiLombokTests extends TestBaseApi {
     @Tag("rest_api")
     @DisplayName("5. Авторизация пользователя: Post - Login - successful")
     void postLoginSuccessfulUserTest() {
-        LoginBodyModel authData = new LoginBodyModel();
-        authData.setEmail(userEmail);
-        authData.setPassword(userPassLogin);
+        LoginBodyModel authData = new LoginBodyModel(userEmail,userPassLogin);
         LoginResponseModel response = step("Запрос на авторизацию зарегистрированного пользователя", () ->
                 given(baseRequestSpecification)
                         .body(authData)
