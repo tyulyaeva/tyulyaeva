@@ -14,7 +14,7 @@
 ### 🔧 Мои инструменты и технологии:
 <p align="center">
 <img width="6%" title="IntelliJ IDEA" src="media/logo/Idea.svg">
-<img width="6%" title="RestAssured" src="media/logo/RestAssured.png">
+<img width="6%" title="RestAssured" src="media/logo/rest-assured.jpg">
 <img width="6%" title="Java" src="media/logo/Java.svg">
 <img width="6%" title="Selenide" src="media/logo/Selenide.svg">
 <img width="6%" title="Selenoid" src="media/logo/Selenoid.svg">
@@ -42,7 +42,7 @@
 ### ✅ Проект по автоматизации mobile тестов для приложения [Wikipedia](https://ru.wikipedia.org/)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=tyulyaeva&repo=Wikipedia_mobile_autotest&theme=shadow_red)](https://github.com/tyulyaeva/Wikipedia_mobile_autotest)
 ---
-### 📊Моя статистика:
+### 📊 Моя статистика:
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tyulyaeva&theme=algolia)
 ![](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=tyulyaeva&theme=algolia)
 ![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=tyulyaeva&theme=algolia)
