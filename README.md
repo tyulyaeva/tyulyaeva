@@ -1,5 +1,6 @@
  <h1 align="center"> Привет, меня зовут Инна!  </h1>
 <h3 align="center"> QA Engineer </h3>
+---
 
 ### 📇 Мои контакты:
  <p align="left">
