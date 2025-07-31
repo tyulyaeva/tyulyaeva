@@ -8,7 +8,6 @@
     <a href="https://github.com/tyulyaeva" target="_blank"><img alt="GitHub" src="https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=GitHub&logoColor=white" height="20"></a> 
     <a href="https://career.habr.com/inna-tyulyaeva" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/habr career-%2377A2B6.svg?&style=for-the-badge&logo=habr&logoColor=white" height="20"></a>
 </p>
-
 ---
 ### 🔧 Мои инструменты и технологии:
 <p align="center">
