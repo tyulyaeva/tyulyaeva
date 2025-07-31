@@ -36,7 +36,7 @@
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=tyulyaeva&repo=Labitint_UI_autotests&theme=shadow_red)](https://github.com/tyulyaeva/Labitint_UI_autotests)
 
 ### ✅ Проект API автоматизации  сервиса [Reqres.in](https://reqres.in/)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=tyulyaeva&repo=ReqresIn_API_autotests&theme=shadow_red)](https://github.com/https://github.com/tyulyaeva/ReqresIn_API_autotests)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=tyulyaeva&repo=ReqresIn_API_autotests&theme=shadow_red)](https://github.com/tyulyaeva/ReqresIn_API_autotests)
 
 ### ✅ Проект по автоматизации mobile тестов для приложения [Wikipedia](https://ru.wikipedia.org/)
 [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=tyulyaeva&repo=Wikipedia_mobile_autotest&theme=shadow_red)](https://github.com/tyulyaeva/Wikipedia_mobile_autotest)
