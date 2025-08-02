@@ -34,13 +34,13 @@
 ### Мои проекты по автоматизации тестирования на Java:
 
 ### ✅ Проект UI автоматизации сайта [Лабиринт](https://www.labirint.ru/)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=tyulyaeva&repo=Labitint_UI_autotests&theme=shadow_red)](https://github.com/tyulyaeva/Labitint_UI_autotests)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=tyulyaeva&repo=Labitint_UI_autotests&theme=shadow_blue)](https://github.com/tyulyaeva/Labitint_UI_autotests)
 
 ### ✅ Проект API автоматизации  сервиса [Reqres.in](https://reqres.in/)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=tyulyaeva&repo=ReqresIn_API_autotests&theme=shadow_red)](https://github.com/tyulyaeva/ReqresIn_API_autotests)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=tyulyaeva&repo=ReqresIn_API_autotests&theme=shadow_blue)](https://github.com/tyulyaeva/ReqresIn_API_autotests)
 
 ### ✅ Проект по автоматизации mobile тестов для приложения [Wikipedia](https://ru.wikipedia.org/)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=tyulyaeva&repo=Wikipedia_mobile_autotest&theme=shadow_red)](https://github.com/tyulyaeva/Wikipedia_mobile_autotest)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=tyulyaeva&repo=Wikipedia_mobile_autotest&theme=shadow_blue)](https://github.com/tyulyaeva/Wikipedia_mobile_autotest)
 ---
 ### 📊 Моя статистика:
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tyulyaeva&theme=algolia)
